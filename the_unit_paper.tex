@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amsfonts,amssymb}   %% AMS mathematics macros
+
+\usepackage{pagecolor}% http://ctan.org/pkg/{pagecolor}
+
+\parindent 0pt
+\setlength{\parskip}{1em} 
+
+\title{The Unit: Establishing a Crypto-Native Unit of Account (draft)}
+\author{Ibai Basabe}
+
+
+\begin{document}
+
+\date{March 7, 2021}
+
+\pagecolor{yellow!15!}
+
+\maketitle
+
+
+\begin{abstract}
+We propose a community-managed crypto index tied to global population data, aimed to replace the USD as the World Unit of Account. We call this index: The Unit. 
+\end{abstract}
+
+
+\tableofcontents
+\newpage
+
+\section{Motivation}
+
+In the quest for establishing an alternative unit of account to the United States Dollar, which is also not significantly affected by any individual world currency, we have concluded that only an effective decentralized index can achieve this goal. Our calling is to establish The Unit as a currency-agnostic World Unit of Account. 
+
+\section{Index Info}
+
+The Unit aims to include all large-cap cryptocurrencies, and for currency inclusion in the index, we have community-managed criteria. The original rules are established through the publication of this document and their respective implementations.
+
+\subsection{Criteria for Inclusion in The Unit}
+
+Let $S$ be the total current supply of the Rank 1 currency (currently Bitcoin).
+
+\begin{itemize}
+
+\item Valuation: Market capitalization is greater than $\left(\frac{1}{3}\right)^5 S$.
+\item Volume of Trade: The currency must be widely traded with at least a year of public trading. As a soft rule the yearly average 1-day volume must be greater than $\left(\frac{1}{3}\right)^7 S$.
+\item Issuance: The currency supply must be defined by the consensus rules.
+\item Availability: At least $50\%$ of the maximum supply must be available for trading in the open markets.
+
+\end{itemize}
+
+
+\subsection{Including and Excluding coins from the Index}
+
+There is a voting mechanism for the owners of the ABA token to vote on changes to the index, a system based on weight and time to add and delete currencies with minimal predictable impact from the index.
+
+
+\section{Index Data}
+
+\subsection{Currency Data}
+
+The index data will be collected from decentralized sources such as decentralized exchanges and decentralized oracle networks. This data will be publicly aggregated and will always remain publicly verifiable. 
+
+The community-run crypto-native index, or as we like to call it, the new World Unit of Account, will become the accounting unit for all the Metaverse and beyond. 
+
+At this stage, the index would stand as a sum of the market caps of the indexed currencies. 
+
+$$
+S_0+S_1 P_{1,0}+ S_2\ P_{2,0}+\cdots+ S_n\ P_{n,0} = \sum_{i=0}^{n} S_iP_{i,0}
+$$
+
+\subsection{Population and Life Expectancy Data}
+
+Population and life expectancy data are critical factors for the creation of a World Unit of Account. There are various sources to obtain this data to incorporate into the index; the process is to aggregate the data from different sources into a chainlink oracle to produce a trusted verifiable data stream and calculate its average. 
+
+
+Let $Y$ be the average world life expectancy in years and $N$ the total number of people worldwide. Then The Unit is defined by the following:
+
+$$
+\frac{\displaystyle{\sum_{i=0}^{n} S_iP_{i,0}}}{Y N}
+$$
+
+\subsection{Volatility Factors}
+
+A normalization factor to dampen the effects of extreme volatility of each cryptocurrency may be included in later alpha versions of The Unit. The process to include these changes may occur through the voting mechanisms. 
+
+\section{Governance}
+
+\subsection{ABA}
+
+
+
+ABA is originally designed to be the underlying network token for the dAbacus network. 
+
+At first, ABA will be used as the governance token for The Unit, followed by launching the related vaults incentivized through ABA rewards. 
+
+As the road map unwraps, we will carry out a rollout on the largest and most widely accepted asset-enabled ledgers including but not limited to Ethereum.
+
+
+\subsection{Vaults and Pools}
+
+Vaults are designed to create a global cross-blockchain index fund generating excellent liquidity for the index. 
+
+These vaults and pools will automatically rebalance each other, creating the first decentralized index fund product. The rebalancing process can also be adjusted based on our governance protocols. The possibilities are endless, and we might develop different levels of vaults offering short, mid and long-term sensitivity to the index. 
+
+\section{Index Funds}
+
+We are launching several crypto products based on the index. Furthermore, Index fund providers will be able to add their own pegs to the index. These pegs will increase the relevance of The Unit over time. Private index funds verifiable once every $n$ number of blocks could also become a product. 
+
+
+\end{document}
