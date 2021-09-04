@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Motivation}{3}%
+\contentsline {section}{\numberline {2}Index Info}{3}%
+\contentsline {subsection}{\numberline {2.1}Criteria for Inclusion in The Unit}{3}%
+\contentsline {subsection}{\numberline {2.2}Including and Excluding coins from the Index}{3}%
+\contentsline {section}{\numberline {3}Index Data}{4}%
+\contentsline {subsection}{\numberline {3.1}Currency Data}{4}%
+\contentsline {subsection}{\numberline {3.2}Population and Life Expectancy Data}{4}%
+\contentsline {subsection}{\numberline {3.3}Volatility Factors}{5}%
+\contentsline {section}{\numberline {4}Governance}{5}%
+\contentsline {subsection}{\numberline {4.1}ABA}{5}%
+\contentsline {subsection}{\numberline {4.2}Vaults and Pools}{5}%
+\contentsline {section}{\numberline {5}Index Funds}{6}%
