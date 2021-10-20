@@ -67,11 +67,32 @@ The index data comes from decentralized sources such as decentralized exchanges 
 
 The main goal of this community-run crypto-native index is to become the accounting unit for the whole Metaverse. 
 
-At this stage, the index would stand as a sum of the market caps of the indexed currencies. 
+At this stage, the index would stand as a sum of the market caps of the indexed currencies as follows: 
 
 $$
 S_0+S_1 P_{1,0}+ S_2\ P_{2,0}+\cdots+ S_n\ P_{n,0} = \sum_{i=0}^{n} S_iP_{i,0}
 $$
+
+where $S_i$ is the currency supply of the $i^{th}$ cryptocurrency and $P_{i,j}$ is the price of the $i^{th}$ cryptocurrency in units of the $j^{th}$ cryptocurrency.
+
+\subsection{Raw Index}
+
+The raw index without currency units is defined by:
+
+$$
+\frac{S_0+S_1 P_{1,0}+ S_2\ P_{2,0}+\cdots+ S_n\ P_{n,0}}{S_0}= \frac{\sum_{i=0}^{n} S_iP_{i,0}}{S_0}
+$$
+
+This index would be stable even if the number one currency changes.
+
+\subsection{Alternative Indexes}
+
+Other indexes are built by using lowered indexed cryptocurrencies as the unit. For the $j^{th}$ cryptocurrency, we have:
+
+$$
+S_0P_{0,j}+\cdots+S_j+\cdots+S_nP_{n,j} = \sum_{i=0}^{n} S_iP_{i,j}.
+$$
+
 
 \subsection{Population and Life Expectancy Data}
 
