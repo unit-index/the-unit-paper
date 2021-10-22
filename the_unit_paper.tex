@@ -7,7 +7,7 @@
 \parindent 0pt
 \setlength{\parskip}{1em} 
 
-\title{The Unit: Establishing a Crypto-Native Unit of Account v0.2.0}
+\title{The Unit: Establishing a Crypto-Native Unit of Account v0.2.1}
 \author{Ibai Basabe}
 
 
@@ -75,23 +75,30 @@ $$
 
 where $S_i$ is the currency supply of the $i^{th}$ cryptocurrency and $P_{i,j}$ is the price of the $i^{th}$ cryptocurrency in units of the $j^{th}$ cryptocurrency.
 
-\subsection{Raw Index}
+\subsection{Alternative Currencies}
 
-The raw index without currency units is defined by:
+The same index denominated in other currencies can be built by using lowered indexed cryptocurrencies as the unit. For the $j^{th}$ cryptocurrency, we have:
+
+$$
+S_0P_{0,j}+\cdots+S_j+\cdots+S_nP_{n,j} = \sum_{i=0}^{n} S_iP_{i,j}.
+$$
+
+
+\subsection{Normalized Index}
+
+The normalized index without currency units is defined by:
 
 $$
 \frac{S_0+S_1 P_{1,0}+ S_2\ P_{2,0}+\cdots+ S_n\ P_{n,0}}{S_0}= \frac{\sum_{i=0}^{n} S_iP_{i,0}}{S_0}
 $$
 
-This index would be stable even if the number one currency changes.
+Similarly, it can be normalized to any specific currency as follows:
 
-\subsection{Alternative Indexes}
-
-Other indexes are built by using lowered indexed cryptocurrencies as the unit. For the $j^{th}$ cryptocurrency, we have:
 
 $$
-S_0P_{0,j}+\cdots+S_j+\cdots+S_nP_{n,j} = \sum_{i=0}^{n} S_iP_{i,j}.
+\frac{S_0P_{0,j}+\cdots+S_j+\cdots+S_nP_{n,j}}{S_j} = \frac{\sum_{i=0}^{n} S_iP_{i,j}}{S_j}.
 $$
+
 
 
 \subsection{Population and Life Expectancy Data}
