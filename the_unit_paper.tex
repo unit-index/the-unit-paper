@@ -7,14 +7,12 @@
 \parindent 0pt
 \setlength{\parskip}{1em} 
 
-\title{The Unit: An Unbiased Unit of Account v0.3.0}
+\title{UNIT: Crypto's Indexed Unit of Account v1.0.0}
 \author{Ibai Basabe}
 
 
 \begin{document}
 
-
-\pagecolor{yellow!15!}
 
 \date{}
 
@@ -22,7 +20,7 @@
 
 
 \begin{abstract}
-We propose an {\bf unbiased pure unit of account} ({\bf UNIT}) built from a decentralized index of cryptocurrencies. We then derive a token with the same name that follows UNIT's value. UNIT token creates a currency utility on top of UNIT, giving UNIT the power of a cryptographic token.
+We propose an {\bf indexed unit of account} ({\bf UNIT}) built from a formula that includes a decentralized index of the top cryptocurrencies, and human experience and potential measured in human years. With this, we aim to close the gap between blockchain networks and unite the crypto space. We also launch a token called TINU that follows UNIT's value. TINU keeps its peg to UNIT through overcollateralized vaults. 
 \end{abstract}
 
 
@@ -31,36 +29,38 @@ We propose an {\bf unbiased pure unit of account} ({\bf UNIT}) built from a dece
 
 \section{Motivation}
 
-\subsection{What is The Unit?}
+\subsection{What is UNIT?}
 
-We desire to establish a unit of account that is not significantly affected by any individual cryptocurrency. We believe that we can achieve this goal by starting with a decentralized index. Therefore, our calling is to create this decentralized index (The Unit) and establish UNIT as an unbiased unit of account.
+We desire to establish a crypto-native unit of account that is not significantly affected by any individual cryptocurrency and can reflect the reach of the crypto market. We achieve this goal by starting with a decentralized index of cryptocurrencies and adding crucial human population data. Much like Unidad de Fomento in Chile and SDR at the IMF, UNIT is not a currency but an indexed unit of account.
 
 \subsection{Why Should We Care?}
 
-Currently, the cryptocurrency space uses centralized USD pegs to solve the issue of not having an accounting unit. As a result, coins such as USDT, USDC, and others have become the default benchmarks. On the other hand, decentralized benchmarks are the leading cryptocurrencies, such as Bitcoin and Ethereum. However, both fiat and cryptocurrency benchmarks have biases toward their specific design, code, and policy decisions. The Unit, however, averages all top cryptocurrencies to create an unbiased unit.
+Currently, the cryptocurrency space uses USD to solve the issue of not having an accounting unit. As a result, coins such as USDT, USDC, and others have become the default unit-of-account utility tokens. On the other hand, the leading cryptocurrencies, such as Bitcoin and Ethereum, function as the decentralized benchmarks. However, both fiat and cryptocurrency benchmarks have biases toward their specific design, code, and policy decisions. UNIT, however, averages all top cryptocurrencies to create an unbiased unit.
 
-Because of the properties and design, The Unit sits in a privileged position to bring the cryptocurrency space together. And UNIT can function as the connecting unit in the cryptocurrency space.
+Because of the properties and design, UNIT sits in a privileged position to bring the cryptocurrency space together. UNIT can function as the connecting unit in the cryptocurrency space.
 
-\section{The Unit Selection Criteria}
+Venturing into the exciting new era of Blockchain, Web3, and Cryptocurrency, we often find ourselves inundated with a multitude of promising projects. Amidst this, UNIT emerges as a revolutionary solution, allowing us to track the entire crypto market, reducing the need to focus on individual projects, and eliminating the stress of managing our crypto portfolio. UNIT can function as a shortcut for those who want to stay invested in Crypto in the long run.
 
-The Unit aims to include all large-cap cryptocurrencies to unite and natively quantify the cryptocurrency space. 
+\section{UNIT Selection Criteria}
 
-The crypto community manages the currency inclusion criteria and algorithm, similar to the mechanisms governing the consensus rules in cryptocurrencies. Here are the original rules established through the publication of this document and their respective implementations. 
+UNIT includes all large-cap cryptocurrencies to unite and natively quantify cryptocurrency. Similarly to the mechanisms governing the consensus rules in cryptocurrencies, the global community manages the inclusion criteria and formula.
 
-\subsection{Criteria for Inclusion in The Unit}
+Here are the original rules established through the publication of this document and their respective implementations. 
 
-Let $S$ be the total current supply of the Rank 1 currency (currently Bitcoin) and $\displaystyle{\phi =\frac{1+\sqrt{5}}{2}}$.
+\subsection{Criteria for Inclusion in UNIT}
+
+Let $S$ be the total current supply of the Rank 1 currency (currently Bitcoin) and $\displaystyle{\phi =\frac{1+\sqrt{5}}{2}}$, the golden ratio.
 
 \begin{itemize}
 
-\item Valuation: Market capitalization is greater than $\displaystyle{\frac{S}{\phi^{12}}}$. Moreover, the 180 days average daily capitalization must be greater than $\displaystyle{\frac{S}{\phi^{12}}}$.
-\item Volume of Trade: The currency trades widely with at least a year of public trading. If $R$ is the 180D average market capitalization to trading volume ratio of the cryptocurrencies in The Unit. The 180D average daily volumes must be greater than $\displaystyle{\frac{S}{\phi^{12}R}}$.
+\item Valuation: The 180-days average daily capitalization must be greater than $\displaystyle{\frac{S}{\phi^{12}}}$.
+\item Volume of Trade: The currency trades widely with at least a year of public trading. If $R$ is the 180D average market capitalization to trading volume ratio of the cryptocurrencies in UNIT, the 180D average daily volumes must be greater than $\displaystyle{\frac{S}{\phi^{12}R}}$.
 \item Issuance: The consensus rules must define the currency supply.
 \item Availability: As a weak rule, $50\%$ of the supply must be available for trading.
 
 \end{itemize}
 
-The current volume of trade requirements might change to the amount in fees paid to validators in the future.
+In the future, the current volume of trade requirements might change to the total amount of fees paid to validators/miners.
 
 \subsection{Including and Excluding coins from the Index}
 
@@ -68,15 +68,13 @@ There is a system based on weights and time periods to add and delete currencies
 
 When a coin comes into the index, its initial weight is 0; over time, that weight moves towards 1 (complete inclusion). Conversely, when a coin exits the index, a weight of 1 is reduced to 0 over the same time.
 
-Changes to the specific parameters can be achieved through proposals submitted to The Unit governance, which comprises members of the entire cryptocurrency community.
+Changes to the specific parameters can be achieved through proposals submitted to UNIT governance, which comprises members of the global community.
 
-\section{The Unit Data}
+\section{UNIT Data}
 
-\subsection{Currency Data and Basic Index}
+\subsection{Currency Data and a Basic Index}
 
 The index data comes from decentralized sources such as decentralized exchanges and oracle networks. This publicly verifiable data is then publicly aggregated.
-
-The main goal of this community-run crypto-native index is to create UNIT, the accounting unit for the whole cryptocurrency space. 
 
 A simplified version of the index would stand as the sum of the market caps of the indexed currencies as follows: 
 
@@ -86,6 +84,8 @@ $$
 
 where $S_i$ is the currency supply of the $i^{th}$ cryptocurrency and $P_{i,j}$ is the price of the $i^{th}$ cryptocurrency in units of the $j^{th}$ cryptocurrency.
 
+This comes to the total market capitalization measured in the leading cryptocurrency.
+
 \subsection{Alternative Currencies}
 
 The same index denominated in other currencies can be built using lowered indexed cryptocurrencies as the unit. For the $j^{th}$ cryptocurrency, we have:
@@ -94,6 +94,7 @@ $$
 S_0P_{0,j}+\cdots+S_j+\cdots+S_nP_{n,j} = \sum_{i=0}^{n} S_iP_{i,j}.
 $$
 
+This is the total market capitalization measured in cryptocurrency $j$.
 
 \subsection{Normalized Index}
 
@@ -113,12 +114,11 @@ $$
 
 \subsection{Index Divisor}
 
-This divisor aims to bring The Unit formula closer to the actual market and scale down UNIT to a smaller number. The most human way we have found is to add population and life expectancy at birth data to the formula.
+This divisor aims to bring UNIT closer to the actual market and scale down UNIT to a smaller unit of value. The most stable and accurate way we have found is to add population and life expectancy at birth data to the formula. By multiplying the total population by the life expectancy at birth, the formula contains both the current total human experience and human potential measured in human years.
 
-Population and life expectancy data are critical market factors for creating a meaningful, lasting UNIT for all of humanity. Various oracles provide this data to incorporate it into the index; the process aggregates the data from the different oracles into a Chainlink Datafeed to produce a trusted, verifiable data stream that calculates the average of the answers provided. 
+Population and life expectancy data are critical market factors for creating a meaningful, lasting UNIT for all of humanity. Various oracles provide this data to incorporate it into the index; the process aggregates the data from the different oracles to produce a trusted, verifiable data stream that calculates the average of the answers provided. 
 
-
-Then adding the divisor, The Unit is defined by the following formula. Let $Y$ be the average world life expectancy in years and $N$ the total number of people worldwide. 
+After adding the divisor, UNIT is defined by the following formula. Let $Y$ be the average world life expectancy in years and $N$ the total number of people worldwide. 
 
 $$
 \frac{\displaystyle{\sum_{i=0}^{n} S_iP_{i,0}}}{Y N}
@@ -126,110 +126,107 @@ $$
 
 Index divisors are generally used to offset the impact of the addition or deletion of coins to the index. However, we are currently not modifying the divisor this way. The community might decide to do so in the future. 
 
-Similarly, a divisor may be adjusted to ensure that changes in coin availability do not impact the index. But since coin availability changes are usually reflected in the coins' price, it is likely why we should not adjust the divisor in this way.
+Similarly, a divisor may be adjusted to ensure that changes in coin availability do not impact the index. But since coin availability changes are usually reflected in the coins' price, we should not adjust the divisor in this way.
 
 \subsection{Volatility Factors}
 
-A normalization factor to dampen the effects of extreme volatility of each cryptocurrency may come in later beta versions of The Unit. The process to include these changes may occur through the voting mechanism. Currently, there is no volatility factor included.
+A normalization factor to dampen the effects of extreme volatility of each cryptocurrency may come in later versions of UNIT. The process to include these changes may occur through the voting mechanism. Currently, there is no volatility factor included.
 
 \section{Governance}
 
-The Unit is governed by the selection criteria and index formula algorithms. In turn, these algorithms can be slightly changed through voting mechanisms using the governing token of The Unit, UNT.
+UNIT is governed by the selection criteria and index formula algorithms. In turn, these algorithms can be slightly changed through voting mechanisms using the governing token of UNIT, UN.
 
-The Unit is a DAO, and like any DAO, it is governed by the global community of contributors and speculators. 
+UNIT has a DAO structure, and like any DAO, it is governed by the global community of contributors and speculators. 
 
-\subsection{Governance Token (UNT)}
+\subsection{Governance Token (UN)}
 
-The governance token for The Unit is designed initially to govern the algorithm through a minimal set of governing voting processes. 
+The governance token for UNIT is designed initially to govern the algorithm through a minimal set of governing voting processes. 
 
 As the road map unwraps, we will carry out a rollout on the most extensive and most widely accepted asset-enabled transactional layers, including but not limited to Ethereum.
 
-The UNT holders govern The Unit by using UNT to vote on proposals. There is a grace period in which UNT holders can veto an approved proposal if it is considered risky to the system.
+UN holders govern UNIT by using UN to vote on proposals. There is a grace period in which UN holders can veto an approved proposal if it is considered risky to the system.
 
 \subsection{Governance Processes}
 
-Governing processes are carried out using state-of-the-art voting and governing tools, and governing contracts are deployed to carry out the processes. The community and UNT holders will be in charge of adapting the processes to the latest standards.
+Governing processes are carried out using state-of-the-art voting and governing tools, and governing contracts are deployed to carry out the processes. The community and UN holders will be in charge of adapting the processes to the latest standards.
 
 Tools like Snapshot or Tally are used to vote on proposals, and a governance forum is used to discuss them. Governing processes are both community standards and current innovations.
 
-\section{UNIT}
+\section{TINU}
 
-We are launching several crypto products based on The Unit. UNIT is the centerpiece. As mentioned above, UNIT is both the unit of account and the token pegged to it. In this section, we will focus on the token. The UNIT token is a soft peg to The Unit Index (UNIT).
+TINU is a token pegged to UNIT that can only be issued through our overcollateralized vaults.
 
-\subsection{Collateralized Vaults: UNIT Minting, Burning}
+\subsection{UNIT Overcollateralized Vaults: TINU Minting and Burning}
 
+UNIT Vaults are collateralized by assets agreed to by UNIT governance through the UN token voting. The minimum collateralization level depends on the price ranges in UNIT of the asset used in the particular vault. Each vault only contains one individual asset and a set of parameters. Currently, ETH is the sole collateral source, but UNIT governance will soon consider other collateral sources.
 
-
-UNIT Vaults are collateralized by assets agreed to by The Unit governance through the UNT token voting. The minimum collateralization level depends on the price ranges in UNIT of the asset used in the particular vault. Each vault only contains one individual asset and a set of parameters. Currently, UNT is the sole collateral source, but The Unit governance will soon consider other collateral sources.
-
-To mint UNIT, participants must deposit The Unit’s native token UNT into UNIT vaults (other collaterals in the future). Vaults have a set of risk parameters to ensure UNIT's stability and the continuity of peg to The Unit Index. The risk parameters are:
+To mint TINU, participants must deposit ETH (or other collaterals in the future) into UNIT vaults. Vaults have a set of risk parameters to ensure TINU’s stability and the continuity of the peg to UNIT. The risk parameters are:
 
 \begin{itemize}
-\item UNIT Fee APY: Fee that depends on the amount of UNIT issued to the vault owner.
+\item UNIT Fee APY: Fee that depends on the amount of TINU issued to the vault owner, currently 0.
 \item Liquidation Ratio: Level at which a vault will enter liquidation.
 \item Liquidation Fee: A fee paid by the vault owner for undergoing liquidation.
 \end{itemize}
 
 
-\subsection{Staking Incentives}
+\subsection{Farming Incentives}
 
-The governance token for The Unit is used in vaults to mint UNIT. These vaults are incentivized through governance rewards.
+ETH and other collaterals are used in vaults to mint TINU. These vaults are incentivized through farming rewards.
 
-Currently, staking participants will receive staking rewards in the form of new UNT from the farming pool. Every time UNIT is burned, a UNIT fee, depending on the staking level, will be charged and distributed to the remaining staking participants. At a level higher than 76.4\%, the fee will be 0.5\% and increase linearly to 5\% at 0\%. Staking participants receive staking incentives as long as they maintain the collateralization level sufficiently close to the requirement.
+Currently, farming participants will receive farming rewards in the form of new UN from the farming pool. Farms will open vaults and ad liquidity to swap pools. Participants receive farming incentives as long as they keep swap LP tokens locked in the farming contracts.
 
 
 \subsection{Closing a Vault}
 
-To recover the collateral, vault owners must return the UNIT plus a UNIT fee. The UNIT  fee can only be paid in UNIT. Participants control their vaults as long as the collateral doesn’t fall below the liquidation level. 
+To recover the collateral, vault owners must return all the TINU. Participants control their vaults as long as the collateral doesn’t fall below the liquidation level. 
 
 
 \subsection{Account Liquidations}
 
-Suppose an account's collateralization ratio falls below the required liquidation ratio. In that case, the account owner will have 72 hours to bring the collateral back over the minimum requirement by adding collateral and burning UNIT. However, after 72 hours, anyone can claim UNT locked in the contract by burning the required amount of UNIT.
+Suppose an account's collateralization ratio falls below the liquidation ratio. In that case, the account owner will have 72 hours to bring the collateral back over the minimum requirement by adding collateral and burning TINU. However, after 72 hours, anyone can claim collateral locked in the contract by burning the required amount of TINU.
 
 
 \subsection{Soft Peg}
 
-UNIT follows UNIT thanks to a Chainlink Price Feed brought by the oracles. The robustness and independence of the on-chain Chainlink price feed make it the ideal source of truth. Keepers are incentivized to keep the peg through arbitrage.
+TINU follows UNIT thanks to the overcollateralization of vaults and decentralized price feeds.
+
+\subsection{TINU Utilities}
+
+Due to its nature, TINU can be lent to market participants at high-interest rates. TINU allows market participants to expose themselves to the entire cryptocurrency market without being exposed to the risk of owning an individual coin. 
+
+TINU also allows participants to trade cryptocurrencies away from the US dollar by using TINU as the counterpart instead of USDT, USDC, or DAI.
+
+TINU can be lent to participants who wish to believe in the current system for some time and would like to sell TINU for USD pegs in the hopes the cryptocurrency market will fall relative to fiat currencies.
 
 
-\subsection{UNIT Utilities}
 
-Due to its nature, UNIT can be lent to market participants at high-interest rates. UNIT allows market participants to expose themselves to the entire cryptocurrency market without being exposed to the risk of owning an individual coin. 
+\subsection{Attacks on TINU}
 
-UNIT also allows participants to trade cryptocurrencies away from the US dollar by using UNIT as the counterpart instead of USDT, USDC, or DAI.
-
-UNIT can be lent to participants who wish to believe in the current system for some time and would like to sell UNIT in the hopes the cryptocurrency market will fall relative to fiat currencies.
-
-
-
-\subsection{Attacks on UNIT}
-
-In the case of an attack that could compromise the UNIT system, the community will activate the Emergency Shut Down. The Emergency Shut Down will paralyze the attacker and allow UNIT holders to claim all the remaining collateral.
+In the case of an attack that could compromise the TINU system, the community will activate the Emergency Shut Down. The Emergency Shut Down will paralyze the attacker and allow TINU holders to claim all the remaining collateral.
 
 \subsection{Full Decentralization}
 
-The decentralization process starts with the first node, the first participant, and ends with global participation in a censorship-resistant protocol. The Unit has been following this road from the beginning.
+The decentralization process starts with the first node, the first participant, and ends with global participation in a censorship-resistant protocol. UNIT has been following this road from the beginning.
 
 \section{Engagement and Market Participants}
 
-\subsection{The Unit Prediction Market and Prize Pools}
+\subsection{UNIT Prediction Market and Prize Pools}
 
-To get people acquainted with how The Unit works and the importance of size and relative importance ranking, we open up pools to bet on the outcome of a ranking event.
+To get people acquainted with how UNIT works and the importance of size and relative importance ranking, we open up pools to bet on the outcome of a ranking event.
 
-Pools are designed to create a global cross-blockchain game around the ranking of coins and the components of The Unit.
+Pools are designed to create a global cross-blockchain game around the ranking of coins and the components of UNIT.
 
 These pools can deposit on lending platforms such as Aave to increase the rewards and automatically assign prizes to the winners.
 
 \subsection{Third Party Index Funds}
 
-Because this is a decentralized index, index fund providers can create their pegs to UNIT. These pegs should increase the relevance of The Unit over time. Private index funds verified once per $n$ blocks could also become a product. 
+Because this is a decentralized index, index fund providers can create their pegs to UNIT. These pegs should increase the relevance of UNIT over time. Private index funds verified once per $n$ blocks could also become a product. 
 
 
 \section{Disclaimer}
 
-The Unit index is not an investment product. It is not possible to invest directly in an index. The past performance of an index is not an indication or guarantee of future results. The Unit index makes no assurance that investment products based on the index will accurately track index performance or provide positive investment returns. A decision to invest in any such investment fund or other investment vehicles should not rely on the statements outlined in this document. 
+UNIT is not an investment product. It is not possible to invest directly in an index. The past performance of an index is not an indication or guarantee of future results. UNIT makes no assurance that investment products based on the index will accurately track index performance or provide positive investment returns. A decision to invest in any such investment fund or other investment vehicles should not rely on the statements outlined in this document. 
 
-These materials have been prepared solely for informational purposes based upon information generally available to the public and from sources believed to be reliable. In no event shall The Unit Parties be liable to any party for any direct, indirect, incidental, exemplary, compensatory, punitive, special, or consequential damages, costs, expenses, legal fees, or losses (including, without limitation, lost income or lost profits and opportunity costs) in connection with any use of the Content even if advised of the possibility of such damages.
+These materials have been prepared solely for informational purposes based upon information generally available to the public and from sources believed to be reliable. In no event shall UNIT Parties be liable to any party for any direct, indirect, incidental, exemplary, compensatory, punitive, special, or consequential damages, costs, expenses, legal fees, or losses (including, without limitation, lost income or lost profits and opportunity costs) in connection with any use of the Content even if advised of the possibility of such damages.
 
 \end{document}
